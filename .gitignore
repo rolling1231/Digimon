@@ -7,3 +7,7 @@ backend/.env
 frontend/dist/
 frontend/node_modules/
 backend/node_modules/
+HelloAgumon/node_modules/
+HelloAgumon/dist/
+.zip
+__MACOSX/
