@@ -11,6 +11,11 @@ const port = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 
+// Health Check for AWS
+app.get('/', (req, res) => {
+  res.send('Agumon Backend is running!');
+});
+
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
 
 // Agumon Persona Setting

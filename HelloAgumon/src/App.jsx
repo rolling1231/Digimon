@@ -135,7 +135,8 @@ function App() {
 
     try {
       // 진짜 백엔드(Gemini)에 요청! (이름도 같이 보낸다구!)
-      const response = await axios.post("http://localhost:4000/api/chat", {
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:4000";
+      const response = await axios.post(`${apiUrl}/api/chat`, {
         message: userText,
         userName: userName
       });
